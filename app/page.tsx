@@ -20,71 +20,115 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main>
-      <section className="relative overflow-hidden bg-slate-950 text-white">
+      {/* Premium Hero Section */}
+      <section className="relative overflow-hidden bg-slate-950">
+        {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0">
-          <Image src="/assets/images/assets/screen_01.png" alt="Hari Properties premium real estate advisory office in Mysuru" fill sizes="100vw" className="object-cover opacity-80" priority />
+          <Image 
+            src="/assets/images/assets/screen_01.png" 
+            alt="Luxury property background" 
+            fill 
+            sizes="100vw" 
+            className="object-cover" 
+            priority 
+          />
+          {/* Dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/60 to-slate-950/40"></div>
+          {/* Additional dark vignette */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/40"></div>
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="rounded-[2.5rem] border border-white/10 bg-slate-950/80 p-10 shadow-soft backdrop-blur-xl lg:p-16">
-            <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-              <div className="space-y-8">
-                <div className="inline-flex rounded-full bg-gold/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-gold">
-                  Your Trusted Partner in Real Estate
-                </div>
-                <div className="space-y-6">
-                  <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-                    Hari Properties — premium real estate advisory from Mysuru to Bengaluru.
-                  </h1>
-                  <p className="max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
-                    Trusted property search, sales, rentals and investment advisory built for discerning clients who value clarity, service and local expertise.
-                  </p>
-                </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Link href="/services" className="btn-primary">
-                    Explore our services
-                  </Link>
-                  <Link href="/featured-projects" className="btn-ghost">
-                    View featured projects
-                  </Link>
-                </div>
+        {/* Hero Content */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
+          <div className="max-w-3xl space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/30 px-5 py-2.5 backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-gold"></span>
+              <span className="text-sm font-semibold uppercase tracking-widest text-gold">Your Trusted Partner in Real Estate</span>
+            </div>
+
+            {/* Main Headline */}
+            <div className="space-y-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                Premium Real Estate Advisory Across Karnataka
+              </h1>
+              
+              {/* Subheadline */}
+              <p className="text-lg sm:text-xl text-slate-200 max-w-2xl leading-relaxed">
+                Helping families, investors, and businesses discover exceptional properties with confidence. From Mysuru to Bengaluru, we deliver luxury service backed by local market expertise.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link 
+                href="/featured-projects" 
+                className="inline-flex items-center justify-center rounded-full bg-gold hover:bg-gold/90 px-8 py-4 text-base font-semibold text-slate-950 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                Explore Properties
+              </Link>
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center justify-center rounded-full border-2 border-white hover:border-gold hover:bg-white/10 px-8 py-4 text-base font-semibold text-white transition-all duration-200 backdrop-blur-sm"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+              <div>
+                <p className="text-2xl sm:text-3xl font-bold text-gold">120+</p>
+                <p className="mt-2 text-sm text-slate-300">Properties Sold</p>
               </div>
-
-              <div className="grid gap-6 rounded-[2rem] bg-white/5 p-6 sm:p-8">
-                <div className="rounded-[2rem] border border-white/10 bg-slate-900/95 p-8">
-                  <p className="text-sm uppercase tracking-[0.24em] text-gold">Local focus</p>
-                  <h2 className="mt-4 text-3xl font-semibold text-white">Karnataka market intelligence</h2>
-                  <p className="mt-4 text-slate-300 leading-7">From Mysuru to Mandya, we identify premium opportunities with the details that matter most.</p>
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-[1.75rem] bg-slate-900/95 p-5 text-white">
-                    <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Buy</p>
-                    <p className="mt-3 text-xl font-semibold">Signature homes</p>
-                  </div>
-                  <div className="rounded-[1.75rem] bg-slate-900/95 p-5 text-white">
-                    <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Sell</p>
-                    <p className="mt-3 text-xl font-semibold">Premium marketing</p>
-                  </div>
-                </div>
+              <div>
+                <p className="text-2xl sm:text-3xl font-bold text-gold">95%</p>
+                <p className="mt-2 text-sm text-slate-300">Client Satisfaction</p>
+              </div>
+              <div>
+                <p className="text-2xl sm:text-3xl font-bold text-gold">10+</p>
+                <p className="mt-2 text-sm text-slate-300">Years Experience</p>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Bottom Accent Shape */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
       </section>
 
+      {/* Premium Search Section - positioned with negative margin for modern overlap */}
+      <section className="relative z-20 -mt-16 px-6 lg:px-8 pb-20">
+        <div className="mx-auto max-w-6xl">
+          <SearchPanel properties={properties} />
+        </div>
+      </section>
+
+      {/* Trust & Credibility Section */}
       <TrustBar />
 
-      <section className="-mt-16 px-6 lg:px-8">
-        <SearchPanel properties={properties} />
-      </section>
-
+      {/* Why Choose Hari Properties */}
       <WhyChoose />
+
+      {/* Featured Properties */}
       <FeaturedSection title="Featured Properties" properties={featuredProjects} />
+
+      {/* Performance Stats */}
       <StatsSection />
+
+      {/* Services Section */}
       <ServicesSection />
+
+      {/* Testimonials & Social Proof */}
       <Testimonials />
-      <LocationsSection />
+
+      {/* Developer Partners */}
       <BuilderShowcase />
+
+      {/* Featured Locations */}
+      <LocationsSection />
+
+      {/* Contact & Consultation Section */}
       <HomeContactSection />
     </main>
   )

@@ -36,18 +36,23 @@ export default function SearchPanel({ properties }: { properties: Property[] }) 
   }, [category, city, locality, budget, propertyType])
 
   return (
-    <div className="rounded-[2.5rem] border border-slate-200/90 bg-white px-6 py-8 shadow-soft sm:px-10">
-      <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.32em] text-gold">Property search</p>
-          <h2 className="mt-3 text-3xl font-semibold text-brand sm:text-4xl">Find the right premium property.</h2>
+    <div className="rounded-[2.5rem] border border-slate-200/90 bg-white/95 backdrop-blur-sm px-6 py-10 shadow-xl sm:px-10 lg:px-12">
+      {/* Search Header */}
+      <div className="mb-10 space-y-4">
+        <div className="inline-flex items-center gap-2 rounded-full bg-gold/10 border border-gold/30 px-4 py-2">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gold">Smart Search</span>
         </div>
-        <p className="max-w-xl text-sm text-slate-600">Search curated homes, rentals and commercial spaces across Mysuru, Bengaluru and surrounding markets.</p>
+        <div className="max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand">Find Your Perfect Property</h2>
+          <p className="mt-3 text-slate-600">Search curated properties across Mysuru, Bengaluru, and Karnataka markets.</p>
+        </div>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[1.2fr_1.2fr_1.2fr_1.2fr_1fr]">
-        <div className="sm:col-span-1">
-          <label className="mb-2 block text-sm font-medium text-slate-700">Category</label>
+      {/* Search Filters Grid */}
+      <div className="grid gap-4 lg:grid-cols-6">
+        {/* Property Type Filter */}
+        <div className="lg:col-span-1">
+          <label className="mb-3 block text-xs font-semibold uppercase tracking-widest text-slate-700">Type</label>
           <div className="grid gap-2">
             {categories.map((item) => (
               <button
@@ -55,7 +60,11 @@ export default function SearchPanel({ properties }: { properties: Property[] }) 
                 type="button"
                 onClick={() => setCategory(item.id)}
                 aria-pressed={category === item.id}
-                className={`rounded-3xl px-4 py-3 text-sm font-semibold transition ${category === item.id ? 'bg-brand text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+                className={`rounded-lg px-3 py-2.5 text-sm font-semibold transition-all ${
+                  category === item.id 
+                    ? 'bg-brand text-white shadow-md' 
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
               >
                 {item.label}
               </button>
@@ -63,63 +72,105 @@ export default function SearchPanel({ properties }: { properties: Property[] }) 
           </div>
         </div>
 
-        <label className="block text-sm font-medium text-slate-700">
-          Keyword
-          <input placeholder="e.g. 3 BHK, Whitefield, near mall" className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
-        </label>
-
-        <label className="block text-sm font-medium text-slate-700">
-          City
-          <select value={city} onChange={(event: ChangeEvent<HTMLSelectElement>) => setCity((event.currentTarget as unknown as { value: string }).value)} className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20">
+        {/* City Filter */}
+        <div className="lg:col-span-1">
+          <label className="mb-3 block text-xs font-semibold uppercase tracking-widest text-slate-700">City</label>
+          <select 
+            value={city} 
+            onChange={(event: ChangeEvent<HTMLSelectElement>) => setCity((event.currentTarget as unknown as { value: string }).value)} 
+            className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm font-medium text-slate-900 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20"
+          >
             {cities.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
-        </label>
+        </div>
 
-        <label className="block text-sm font-medium text-slate-700">
-          Locality
-          <select value={locality} onChange={(event: ChangeEvent<HTMLSelectElement>) => setLocality((event.currentTarget as unknown as { value: string }).value)} className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20">
-            <option value="">Any locality</option>
+        {/* Locality Filter */}
+        <div className="lg:col-span-1">
+          <label className="mb-3 block text-xs font-semibold uppercase tracking-widest text-slate-700">Locality</label>
+          <select 
+            value={locality} 
+            onChange={(event: ChangeEvent<HTMLSelectElement>) => setLocality((event.currentTarget as unknown as { value: string }).value)} 
+            className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm font-medium text-slate-900 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20"
+          >
+            <option value="">All locations</option>
             {localities.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
-        </label>
+        </div>
 
-        <label className="block text-sm font-medium text-slate-700">
-          Budget
-          <select value={budget} onChange={(event: ChangeEvent<HTMLSelectElement>) => setBudget((event.currentTarget as unknown as { value: string }).value)} className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20">
+        {/* Property Type Filter */}
+        <div className="lg:col-span-1">
+          <label className="mb-3 block text-xs font-semibold uppercase tracking-widest text-slate-700">Property</label>
+          <select 
+            value={propertyType} 
+            onChange={(event: ChangeEvent<HTMLSelectElement>) => setPropertyType((event.currentTarget as unknown as { value: string }).value)} 
+            className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm font-medium text-slate-900 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20"
+          >
+            <option value="">All types</option>
+            {propertyTypes.map((item) => (
+              <option key={item} value={item}>{item}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Budget Filter */}
+        <div className="lg:col-span-1">
+          <label className="mb-3 block text-xs font-semibold uppercase tracking-widest text-slate-700">Budget</label>
+          <select 
+            value={budget} 
+            onChange={(event: ChangeEvent<HTMLSelectElement>) => setBudget((event.currentTarget as unknown as { value: string }).value)} 
+            className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm font-medium text-slate-900 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20"
+          >
             <option value="">Any budget</option>
             {budgets.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
-        </label>
+        </div>
 
-        <label className="block text-sm font-medium text-slate-700">
-          Property type
-          <select value={propertyType} onChange={(event: ChangeEvent<HTMLSelectElement>) => setPropertyType((event.currentTarget as unknown as { value: string }).value)} className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20">
-            <option value="">Any type</option>
-            {propertyTypes.map((item) => (
-              <option key={item} value={item}>{item}</option>
-            ))}
-          </select>
-        </label>
+        {/* Clear Filters Button */}
+        <div className="flex items-end">
+          <button
+            type="button"
+            onClick={() => {
+              setCategory('buy')
+              setCity('Mysuru')
+              setLocality('')
+              setBudget('')
+              setPropertyType('')
+            }}
+            className="w-full rounded-lg border border-slate-300 hover:bg-slate-50 px-3 py-2.5 text-sm font-semibold text-slate-700 transition"
+          >
+            Reset
+          </button>
+        </div>
       </div>
 
+      {/* Results Section */}
       <div className="mt-10 border-t border-slate-200 pt-8">
-        <p className="text-sm font-semibold text-slate-700">Showing {filtered.length} listings</p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-6 flex items-center justify-between">
+          <p className="text-sm font-semibold text-slate-700">
+            <span className="text-brand text-lg font-bold">{filtered.length}</span> listing{filtered.length !== 1 ? 's' : ''} available
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {isFiltering ? (
             Array.from({ length: 3 }).map((_, index) => (
-              <div key={index} className="animate-pulse rounded-[2rem] border border-slate-200 bg-slate-100 p-8" />
+              <div key={index} className="animate-pulse rounded-[2.5rem] border border-slate-200 bg-slate-100 h-96" />
             ))
           ) : filtered.length > 0 ? (
             filtered.map((property) => <PropertyCard key={property.slug} property={property} />)
           ) : (
-            <div className="col-span-full rounded-[2rem] bg-slate-50 p-10 text-center text-slate-600 shadow-soft">
-              No listings match your filters yet. Try another budget or locality.
+            <div className="col-span-full rounded-[2rem] bg-slate-50 p-12 text-center">
+              <svg className="mx-auto h-12 w-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+              </svg>
+              <p className="mt-4 text-slate-600 font-medium">No listings match your criteria</p>
+              <p className="mt-2 text-sm text-slate-500">Try adjusting your filters or contact us for personalized assistance.</p>
             </div>
           )}
         </div>
