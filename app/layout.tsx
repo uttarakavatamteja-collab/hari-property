@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import FloatingCTAs from '../components/FloatingCTAs'
 
 export const metadata: Metadata = {
   title: 'Hari Properties | Trusted Real Estate Advisory in Mysuru & Karnataka',
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         {children}
         <Footer />
+        <FloatingCTAs />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </body>
     </html>
