@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Fonts: Inter for UI, Merriweather for headings - must precede all styling rules */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700&display=swap');
+/* Google Fonts: Inter for UI UI elements, Cormorant Garamond for luxury headings - must precede all styling rules */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;600;700;800&display=swap');
 
 @theme {
   --color-brand: #08112c;
@@ -12,16 +12,20 @@
   --color-surface: #f5f7fb;
   --color-muted: #64748b;
 
-  --shadow-soft: 0 24px 80px rgba(8, 17, 44, 0.12);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: Inter, system-ui, sans-serif;
 
-  --animate-fade-in-up: fadeInUp 0.8s ease-out both;
+  --shadow-soft: 0 24px 80px rgba(8, 17, 44, 0.08);
+  --shadow-luxury: 0 30px 100px rgba(212, 175, 55, 0.08);
+
+  --animate-fade-in-up: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-pulse-slow: pulseSlow 3s infinite;
   --animate-float-slow: floatSlow 3s ease-in-out infinite;
 
   @keyframes fadeInUp {
     0% {
       opacity: 0;
-      transform: translateY(18px);
+      transform: translateY(24px);
     }
     100% {
       opacity: 1;
@@ -59,7 +63,7 @@
 
   color-scheme: light;
   background-color: var(--surface);
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,7 +78,7 @@ body {
   min-height: 100vh;
   background: var(--surface);
   color: var(--brand);
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-feature-settings: "kern" 1;
 }
 
@@ -83,13 +87,15 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: Merriweather, Georgia, serif;
+  font-family: var(--font-serif);
   color: var(--brand);
-  line-height: 1.15;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 p {
-  color: #374151;
+  color: #4b5563;
 }
 
 /* Custom premium components using standard CSS nested declarations */
@@ -99,17 +105,19 @@ p {
   justify-content: center;
   border-radius: 9999px;
   background-color: var(--color-gold);
-  padding: 0.75rem 1.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  padding: 0.85rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: #08112c;
-  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
     background-color: #c29e2f;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
   }
 }
 
@@ -118,16 +126,19 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  border: 1px solid rgba(15, 17, 44, 0.15);
-  padding: 0.75rem 1.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  border: 1px solid rgba(8, 17, 44, 0.25);
+  padding: 0.85rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: var(--color-brand);
-  background-color: #ffffff;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
-    background-color: var(--color-surface);
+    background-color: var(--color-brand);
+    color: #ffffff;
     border-color: var(--color-brand);
     transform: translateY(-2px);
   }
@@ -138,23 +149,26 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  padding: 0.75rem 1.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  padding: 0.85rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: #ffffff;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #ffffff;
+    color: var(--color-brand);
     border-color: #ffffff;
     transform: translateY(-2px);
   }
 }
 
 @utility card-accent {
-  background-image: linear-gradient(180deg, rgba(212, 175, 55, 0.03), transparent 40%);
+  background-image: linear-gradient(180deg, rgba(212, 175, 55, 0.02), transparent 40%);
 }
 
 @utility form-select-premium {
