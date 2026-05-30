@@ -10,95 +10,96 @@ import Testimonials from '../components/Testimonials'
 import StatsSection from '../components/StatsSection'
 import LocationsSection from '../components/LocationsSection'
 import HomeContactSection from '../components/HomeContactSection'
-import { properties, featuredProjects, newLaunches } from '../lib/data'
+import { properties, featuredProjects } from '../lib/data'
 
 export const metadata = {
-  title: 'Hari Properties | Luxury Real Estate in Mysuru',
-  description: 'Hari Properties offers premium real estate services in Mysuru and Karnataka for buyers, sellers, tenants and investors.',
+  title: 'Hari Properties | Luxury Real Estate in Mysuru & Karnataka',
+  description: 'Hari Properties offers premium real estate advisory services in Mysuru and Karnataka for buyers, sellers, tenants and investors.',
 }
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="bg-surface">
       {/* Premium Hero Section */}
-      <section className="relative overflow-hidden bg-slate-950">
+      <section className="relative overflow-hidden bg-slate-950 min-h-[90vh] flex items-center">
         {/* Background Image with Gradient Overlay */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <Image 
-            src="/assets/images/assets/screen_01.png" 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
             alt="Luxury property background" 
             fill 
             sizes="100vw" 
-            className="object-cover" 
+            className="object-cover opacity-80" 
             priority 
           />
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/60 to-slate-950/40"></div>
-          {/* Additional dark vignette */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/40"></div>
+          {/* Multi-layered premium gradient overlay for maximum readability and luxury depth */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-slate-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32 w-full">
           <div className="max-w-3xl space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/30 px-5 py-2.5 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-gold"></span>
-              <span className="text-sm font-semibold uppercase tracking-widest text-gold">Your Trusted Partner in Real Estate</span>
+            <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/30 px-5 py-2.5 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-gold animate-pulse"></span>
+              <span className="text-xs font-bold uppercase tracking-widest text-gold">
+                Your Trusted Partner in Real Estate
+              </span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-6">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
                 Premium Real Estate Advisory Across Karnataka
               </h1>
               
               {/* Subheadline */}
-              <p className="text-lg sm:text-xl text-slate-200 max-w-2xl leading-relaxed">
-                Helping families, investors, and businesses discover exceptional properties with confidence. From Mysuru to Bengaluru, we deliver luxury service backed by local market expertise.
+              <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                Discover exceptional residential, commercial, and investment properties with confidence. From Mysuru to Bengaluru, we deliver bespoke advisory services backed by deep local market expertise.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Link 
                 href="/featured-projects" 
-                className="inline-flex items-center justify-center rounded-full bg-gold hover:bg-gold/90 px-8 py-4 text-base font-semibold text-slate-950 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+                className="inline-flex items-center justify-center rounded-full bg-gold hover:bg-[#c29e2f] px-8 py-4 text-sm font-bold text-slate-950 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
               >
                 Explore Properties
               </Link>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center justify-center rounded-full border-2 border-white hover:border-gold hover:bg-white/10 px-8 py-4 text-base font-semibold text-white transition-all duration-200 backdrop-blur-sm"
+                className="inline-flex items-center justify-center rounded-full border border-white/50 hover:border-gold hover:bg-white/10 px-8 py-4 text-sm font-bold text-white transition-all duration-300 backdrop-blur-sm hover:-translate-y-0.5 cursor-pointer"
               >
                 Schedule Consultation
               </Link>
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 max-w-lg">
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-gold">120+</p>
-                <p className="mt-2 text-sm text-slate-300">Properties Sold</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-gold tracking-tight">120+</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Properties Sold</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-gold">95%</p>
-                <p className="mt-2 text-sm text-slate-300">Client Satisfaction</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-gold tracking-tight">95%</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Satisfaction</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-gold">10+</p>
-                <p className="mt-2 text-sm text-slate-300">Years Experience</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-gold tracking-tight">10+</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-400">Years Exp</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Accent Shape */}
+        {/* Bottom Accent Line */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
       </section>
 
       {/* Premium Search Section - positioned with negative margin for modern overlap */}
-      <section className="relative z-20 -mt-16 px-6 lg:px-8 pb-20">
+      <section className="relative z-20 -mt-10 sm:-mt-16 px-6 lg:px-8 pb-16">
         <div className="mx-auto max-w-6xl">
           <SearchPanel properties={properties} />
         </div>
