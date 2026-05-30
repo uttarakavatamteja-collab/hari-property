@@ -11,7 +11,7 @@ export default function HomeContactSection() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/30 px-5 py-2.5 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-gold"></span>
-              <span className="text-sm font-semibold uppercase tracking-widest text-gold">Let's Talk Real Estate</span>
+              <span className="text-sm font-semibold uppercase tracking-widest text-gold">Let&apos;s Talk Real Estate</span>
             </div>
 
             {/* Headline */}

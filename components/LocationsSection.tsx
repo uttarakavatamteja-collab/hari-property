@@ -56,7 +56,7 @@ export default function LocationsSection() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-gold">Market Opportunity</p>
             <h3 className="mt-4 text-2xl font-bold text-brand">Growing Demand</h3>
-            <p className="mt-3 text-slate-600">Karnataka's real estate market is experiencing significant growth with increased demand for residential, commercial, and investment properties.</p>
+            <p className="mt-3 text-slate-600">Karnataka&apos;s real estate market is experiencing significant growth with increased demand for residential, commercial, and investment properties.</p>
           </div>
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-gold">Investment Potential</p>
