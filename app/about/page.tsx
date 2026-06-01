@@ -87,7 +87,7 @@ export default function AboutPage() {
           {/* Luxury Frame Image */}
           <div className="relative h-[32rem] overflow-hidden rounded-[2.5rem] border border-slate-200 shadow-2xl">
             <Image
-              src="/assets/images/assets/2.png"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
               alt="Rohan Hari, Founder of Hari Properties"
               fill
               className="object-cover transition duration-700 hover:scale-105"
@@ -153,10 +153,10 @@ export default function AboutPage() {
         />
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { name: 'Rohan Hari', role: 'Founder & CEO', image: '/assets/images/assets/2.png', bio: 'Over 12 years of premier commercial land acquisitions and asset structuring in Karnataka.' },
-            { name: 'Priya Menon', role: 'Director of Residential Services', image: '/assets/images/assets/3.png', bio: 'Expert in high-end Mysuru family villas, luxury apartments, and corporate leasing.' },
-            { name: 'Karthik Rao', role: 'Director of Legal & Compliance', image: '/assets/images/assets/screen_02.jpg', bio: 'Former municipal counsel, specializing in RERA title validation and transaction security.' },
-            { name: 'Ananya Das', role: 'Director of Investment Advisory', image: '/assets/images/assets/screen_04.png', bio: 'Structures high-yield acquisitions for institutional clients and international NRI portfolios.' },
+            { name: 'Rohan Hari', role: 'Founder & CEO', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80', bio: 'Over 12 years of premier commercial land acquisitions and asset structuring in Karnataka.' },
+            { name: 'Priya Menon', role: 'Director of Residential Services', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80', bio: 'Expert in high-end Mysuru family villas, luxury apartments, and corporate leasing.' },
+            { name: 'Karthik Rao', role: 'Director of Legal & Compliance', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80', bio: 'Former municipal counsel, specializing in RERA title validation and transaction security.' },
+            { name: 'Ananya Das', role: 'Director of Investment Advisory', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80', bio: 'Structures high-yield acquisitions for institutional clients and international NRI portfolios.' },
           ].map((member) => (
             <div key={member.name} className="group rounded-[2.5rem] border border-slate-200/80 bg-white p-6 shadow-soft hover:shadow-2xl hover:border-gold/40 transition-all duration-300">
               <div className="relative mb-6 h-56 overflow-hidden rounded-[2rem] bg-slate-950">

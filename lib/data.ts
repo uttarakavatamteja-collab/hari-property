@@ -237,9 +237,9 @@ export const properties: Property[] = [
     area: '5,500 sqft',
     developer: 'Green Meadows Advisory',
     status: 'Hot Deal',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80'
     ],
     description: 'A quiet resort-style farm investment located along the highway, featuring organic mango plantations, and customized premium design.',
     amenities: ['Organic farms', 'Fenced acreage', 'Concierge caretaker', 'Guest cottages'],
@@ -436,9 +436,9 @@ export const properties: Property[] = [
     area: '2,500 sqft',
     developer: 'Hari Properties',
     status: 'Hot Deal',
-    image: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80'
     ],
     description: 'Sleek luxury serviced villa near the base of Chamundi Hills. Features high-speed Wi-Fi, premium appliances, concierge check-in and power backup.',
     amenities: ['Housekeeping', 'Scenic views', 'High-speed Wi-Fi', 'Solar Backup'],
@@ -497,9 +497,9 @@ export const properties: Property[] = [
     area: '3,500 sqft',
     developer: 'Prestige Group',
     status: 'Premium',
-    image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0db9a?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1555529669-e69e7aa0db9a?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80'
     ],
     description: 'Highly visible double-height premium retail showroom on high-footfall MG Road corner. Double facade glazing and private brand display panel.',
     amenities: ['Double height display', 'Pantry Room', 'Heavy Power Load', 'Central AC'],
@@ -584,9 +584,9 @@ export const properties: Property[] = [
     area: '18,500 sqft',
     developer: 'Industrial Space Advisory',
     status: 'Best Value',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=1200&q=80'
     ],
     description: 'Heavy logistics industrial warehouse. Height clearance of 35 feet, heavy concrete floor load capacity, double loading docks and security cabin.',
     amenities: ['Double Loading Docks', '35ft Height Clearance', '3-Phase heavy power', 'CCTV'],
@@ -877,25 +877,25 @@ export const featuredLocations: Location[] = [
   {
     name: 'Mysuru',
     description: 'Premium residential, investment and commercial opportunities with strong local demand.',
-    image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1590766948510-4770306a4c4a?auto=format&fit=crop&w=800&q=80',
     properties: '42',
   },
   {
     name: 'Bengaluru',
     description: 'High-growth technology and premium lifestyle properties in core neighbourhoods.',
-    image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1607583441266-41b2e12f6854?auto=format&fit=crop&w=800&q=80',
     properties: '68',
   },
   {
     name: 'Mandya',
     description: 'Serene villas and long-term investment properties near Mysuru and major highways.',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80',
     properties: '18',
   },
   {
     name: 'Hassan',
     description: 'Emerging markets with attractive land and residential opportunities.',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600100397608-f010e42197ef?auto=format&fit=crop&w=800&q=80',
     properties: '24',
   },
 ]
