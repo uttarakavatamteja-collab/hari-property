@@ -70,20 +70,22 @@ export default function ServicesSection() {
         {services.map((service) => (
           <div 
             key={service.title} 
-            className="group rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-soft transition-all duration-300 hover:shadow-2xl hover:border-gold/40"
+            className="group rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-soft transition-all duration-300 hover:shadow-2xl hover:border-gold/40 flex flex-col justify-between h-full"
           >
-            {/* SVG Geometric Badge */}
-            <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10 border border-gold/20 text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-slate-950">
-              {service.svg}
-            </div>
+            <div>
+              {/* SVG Geometric Badge */}
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10 border border-gold/20 text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-slate-950">
+                {service.svg}
+              </div>
 
-            {/* Header & Body */}
-            <h3 className="mt-8 text-2xl font-bold tracking-tight text-brand font-serif transition-colors duration-200 group-hover:text-gold">
-              {service.title}
-            </h3>
-            <p className="mt-4 text-sm text-slate-600 leading-relaxed font-medium">
-              {service.description}
-            </p>
+              {/* Header & Body */}
+              <h3 className="mt-8 text-2xl font-bold tracking-tight text-brand font-serif transition-colors duration-200 group-hover:text-gold">
+                {service.title}
+              </h3>
+              <p className="mt-4 text-sm text-slate-600 leading-relaxed font-medium">
+                {service.description}
+              </p>
+            </div>
 
             {/* Learn More Luxury Trigger */}
             <div className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold opacity-80 group-hover:opacity-100 transition-opacity duration-200">
@@ -97,11 +99,11 @@ export default function ServicesSection() {
       </div>
 
       {/* Elegant Luxury CTA Panel */}
-      <div className="mt-24 rounded-[2.5rem] border border-gold/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-12 text-center lg:p-16 shadow-2xl">
-        <h3 className="text-3xl font-bold text-white font-serif leading-snug max-w-xl mx-auto sm:text-4xl">
+      <div className="mt-24 rounded-[2.5rem] border border-gold/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-10 text-center lg:p-16 shadow-2xl">
+        <h3 className="text-3xl font-bold text-white text-force-white font-serif leading-snug max-w-xl mx-auto sm:text-4xl">
           Ready to Find Your Perfect Property?
         </h3>
-        <p className="mt-4 text-base text-slate-300 max-w-2xl mx-auto">
+        <p className="mt-4 text-base text-slate-300 text-force-slate-300 max-w-2xl mx-auto">
           Our expert real estate advisors are ready to assist you with every step of your residential or investment property acquisition.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

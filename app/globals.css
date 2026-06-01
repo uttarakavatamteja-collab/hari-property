@@ -1,7 +1,7 @@
-@import "tailwindcss";
-
 /* Google Fonts: Inter for UI UI elements, Cormorant Garamond for luxury headings - must precede all styling rules */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;600;700;800&display=swap');
+
+@import "tailwindcss";
 
 @theme {
   --color-brand: #08112c;
@@ -86,16 +86,83 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
+h1 {
   font-family: var(--font-serif);
   color: var(--brand);
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-size: 2.25rem; /* 36px mobile */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem; /* 48px tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4.5rem; /* 72px desktop */
+  }
+}
+
+h2 {
+  font-family: var(--font-serif);
+  color: var(--brand);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-size: 1.875rem; /* 30px mobile */
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.25rem; /* 36px tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem; /* 48px desktop */
+  }
+}
+
+h3 {
+  font-family: var(--font-serif);
+  color: var(--brand);
+  font-weight: 400;
+  line-height: 1.2;
   letter-spacing: -0.01em;
+  font-size: 1.5rem; /* 24px mobile */
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2rem; /* 32px desktop */
+  }
 }
 
 p {
   color: #4b5563;
+  font-size: 1rem; /* 16px mobile */
+  line-height: 1.7;
+}
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 1.125rem; /* 18px desktop */
+  }
+}
+
+/* Accessibility Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 /* Custom premium components using standard CSS nested declarations */
@@ -188,3 +255,40 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* Dark section visual overrides for WCAG AA contrast compliance */
+.text-force-white {
+  color: #ffffff !important;
+}
+
+.text-force-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.text-force-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Automatic context-aware dark background contrast overrides */
+.bg-slate-950 h1,
+.bg-slate-950 h2,
+.bg-slate-950 h3,
+.from-slate-950 h1,
+.from-slate-950 h2,
+.from-slate-950 h3,
+[class*="bg-slate-950"] h1,
+[class*="bg-slate-950"] h2,
+[class*="bg-slate-950"] h3,
+[class*="from-slate-950"] h1,
+[class*="from-slate-950"] h2,
+[class*="from-slate-950"] h3 {
+  color: #ffffff !important;
+}
+
+.bg-slate-950 p,
+.from-slate-950 p,
+[class*="bg-slate-950"] p,
+[class*="from-slate-950"] p {
+  color: #cbd5e1 !important;
+}
+

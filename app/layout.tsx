@@ -6,12 +6,22 @@ import Footer from '../components/Footer'
 import FloatingCTAs from '../components/FloatingCTAs'
 
 export const metadata: Metadata = {
-  title: 'Hari Properties | Trusted Real Estate Advisory in Mysuru & Karnataka',
-  description: 'Hari Properties is a premium real estate advisory firm serving buyers, sellers, tenants and investors across Karnataka.',
+  title: 'Hari Properties | Premium Luxury Real Estate Advisory in Mysuru & Karnataka',
+  description: 'Hari Properties is Karnataka\'s premier luxury real estate advisory firm. Specializing in high-end villas, premium apartments, commercial investments, and land acquisitions across Mysuru and Bengaluru.',
+  keywords: [
+    'Mysuru Real Estate',
+    'Property Consultant Mysuru',
+    'Luxury Properties Karnataka',
+    'Real Estate Advisory Karnataka',
+    'Hari Properties Mysuru',
+    'Whitefield luxury flats',
+    'Kuvempunagar premium listings',
+    'Villas in Mysuru for sale'
+  ],
   metadataBase: new URL('https://hariproperties.in'),
   openGraph: {
-    title: 'Hari Properties',
-    description: 'Premium real estate advisory in Mysuru and Karnataka with luxury service, investment insight and trusted property guidance.',
+    title: 'Hari Properties | Premium Luxury Real Estate Advisory',
+    description: 'Structure high-value property acquisitions in Karnataka with absolute legal compliance, transparent advisory, and premium concierge service.',
     type: 'website',
     url: 'https://hariproperties.in',
     siteName: 'Hari Properties',
@@ -20,14 +30,14 @@ export const metadata: Metadata = {
         url: '/assets/images/assets/screen_01.png',
         width: 1200,
         height: 630,
-        alt: 'Hari Properties premium real estate advisory in Mysuru',
+        alt: 'Hari Properties luxury real estate advisory in Mysuru',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hari Properties',
-    description: 'Premium real estate advisory in Mysuru and Karnataka.',
+    title: 'Hari Properties | Luxury Real Estate Karnataka',
+    description: 'Premium real estate advisory in Mysuru, Bengaluru, Mandya, and Hassan.',
     images: ['/assets/images/assets/screen_01.png'],
   },
 }

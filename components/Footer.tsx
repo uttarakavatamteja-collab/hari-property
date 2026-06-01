@@ -35,11 +35,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white">Company</h4>
             <ul className="mt-6 space-y-3 text-sm">
-              <li><Link href="/about" className="transition hover:text-white hover:translate-x-1">About Us</Link></li>
-              <li><Link href="/featured-projects" className="transition hover:text-white hover:translate-x-1">Featured Projects</Link></li>
-              <li><Link href="/services" className="transition hover:text-white hover:translate-x-1">Services</Link></li>
-              <li><Link href="/compare" className="transition hover:text-white hover:translate-x-1">Compare Properties</Link></li>
-              <li><Link href="/contact" className="transition hover:text-white hover:translate-x-1">Contact Us</Link></li>
+              <li><Link href="/about" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">About Us</Link></li>
+              <li><Link href="/featured-projects" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Featured Projects</Link></li>
+              <li><Link href="/services" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Services</Link></li>
+              <li><Link href="/compare" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Compare Properties</Link></li>
+              <li><Link href="/contact" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -47,11 +47,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white">Services</h4>
             <ul className="mt-6 space-y-3 text-sm">
-              <li><a href="#" className="transition hover:text-white hover:translate-x-1">Property Buying</a></li>
-              <li><a href="#" className="transition hover:text-white hover:translate-x-1">Property Selling</a></li>
-              <li><a href="#" className="transition hover:text-white hover:translate-x-1">Property Rental</a></li>
-              <li><a href="#" className="transition hover:text-white hover:translate-x-1">Investment Advisory</a></li>
-              <li><a href="#" className="transition hover:text-white hover:translate-x-1">Commercial Real Estate</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Property Buying</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Property Selling</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Property Rental</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Investment Advisory</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-white transition hover:translate-x-1 block">Commercial Real Estate</a></li>
             </ul>
           </div>
 
@@ -60,16 +60,16 @@ export default function Footer() {
             <h4 className="font-bold text-white">Get in Touch</h4>
             <div className="mt-6 space-y-4 text-sm">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Email</p>
-                <a href="mailto:hello@hariproperties.in" className="mt-1 text-slate-300 hover:text-white transition">hello@hariproperties.in</a>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Email</p>
+                <a href="mailto:hello@hariproperties.in" className="mt-1 text-slate-300 hover:text-white transition block">hello@hariproperties.in</a>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Phone</p>
-                <a href="tel:+919000012345" className="mt-1 text-slate-300 hover:text-white transition">+91 90000 12345</a>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Phone</p>
+                <a href="tel:+919000012345" className="mt-1 text-slate-300 hover:text-white transition block">+91 90000 12345</a>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Address</p>
-                <p className="mt-1 text-slate-300">12 Prestige Plaza<br />Kuvempunagar, Mysuru<br />Karnataka 570023</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Address</p>
+                <p className="mt-1 text-slate-300 leading-relaxed">12 Prestige Plaza<br />Kuvempunagar, Mysuru<br />Karnataka 570023</p>
               </div>
             </div>
           </div>

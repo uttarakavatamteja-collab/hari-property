@@ -37,25 +37,33 @@ export default function InquiryForm({ propertyTitle, heading = 'Request more inf
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block text-sm font-medium text-slate-700">
-            Full name
-            <input value={formState.name} onChange={handleChange} name="name" type="text" required className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
-          </label>
-          <label className="block text-sm font-medium text-slate-700">
-            Email address
-            <input value={formState.email} onChange={handleChange} name="email" type="email" required className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
-          </label>
+          <div className="block">
+            <label htmlFor="inquiry-name" className="text-sm font-medium text-slate-700">
+              Full name
+            </label>
+            <input id="inquiry-name" value={formState.name} onChange={handleChange} name="name" type="text" required className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
+          </div>
+          <div className="block">
+            <label htmlFor="inquiry-email" className="text-sm font-medium text-slate-700">
+              Email address
+            </label>
+            <input id="inquiry-email" value={formState.email} onChange={handleChange} name="email" type="email" required className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
+          </div>
         </div>
 
-        <label className="block text-sm font-medium text-slate-700">
-          Phone number
-          <input value={formState.phone} onChange={handleChange} name="phone" type="tel" required className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
-        </label>
+        <div className="block">
+          <label htmlFor="inquiry-phone" className="text-sm font-medium text-slate-700">
+            Phone number
+          </label>
+          <input id="inquiry-phone" value={formState.phone} onChange={handleChange} name="phone" type="tel" required className="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" />
+        </div>
 
-        <label className="block text-sm font-medium text-slate-700">
-          Message
-          <textarea value={formState.message} onChange={handleChange} name="message" rows={4} className="mt-2 w-full rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" placeholder="Tell us about your property requirements..."></textarea>
-        </label>
+        <div className="block">
+          <label htmlFor="inquiry-message" className="text-sm font-medium text-slate-700">
+            Message
+          </label>
+          <textarea id="inquiry-message" value={formState.message} onChange={handleChange} name="message" rows={4} className="mt-2 w-full rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-gold focus:ring-2 focus:ring-gold/20" placeholder="Tell us about your property requirements..."></textarea>
+        </div>
 
         <button disabled={loading} type="submit" className="btn-primary disabled:opacity-60" aria-label="Submit inquiry">
           {loading ? (

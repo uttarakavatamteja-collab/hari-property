@@ -10,7 +10,6 @@ import TrustBar from '../components/TrustBar'
 import ServicesSection from '../components/ServicesSection'
 import Testimonials from '../components/Testimonials'
 import GoogleReviews from '../components/GoogleReviews'
-import StatsSection from '../components/StatsSection'
 import LocationsSection from '../components/LocationsSection'
 import HomeContactSection from '../components/HomeContactSection'
 import { properties, featuredProjects } from '../lib/data'
@@ -48,13 +47,13 @@ export default function HomePage() {
 
             {/* Headline and Subheadline in Cormorant Display */}
             <div className="space-y-6 animate-fade-in-up [animation-delay:200ms]">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white leading-[1.05] font-serif">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white text-force-white leading-[1.05] font-serif">
                 Luxury Real Estate<br />
                 <span className="italic font-normal">Across Karnataka</span>
               </h1>
               
-              <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed font-medium">
-                Exceptional homes, curated investment opportunities, and bespoke advisory services for discerning buyers and private investors.
+              <p className="text-base sm:text-lg lg:text-xl text-slate-300 text-force-slate-300 max-w-2xl leading-relaxed font-medium">
+                Bespoke villas in Mysuru, premium apartments in Bengaluru, and vetted commercial acquisitions structured with complete transparency and RERA compliance.
               </p>
             </div>
 
@@ -117,13 +116,31 @@ export default function HomePage() {
                 Schedule Private Consultation
               </Link>
             </div>
+
+            {/* Premium Embedded Stats Panel */}
+            <div className="grid grid-cols-3 gap-6 max-w-2xl pt-8 mt-4 border-t border-white/10 animate-fade-in-up [animation-delay:700ms]">
+              {[
+                { value: '120+', label: 'Properties Closed' },
+                { value: '95%', label: 'Client Satisfaction' },
+                { value: '10+', label: 'Years Experience' }
+              ].map((stat) => (
+                <div key={stat.label} className="space-y-1">
+                  <p className="text-3xl sm:text-4xl font-light font-serif text-white tracking-tight bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Luxury Scroll Down Indicator */}
           <div className="flex justify-center pt-8 animate-bounce select-none">
             <button
               onClick={() => {
-                const trackEl = (globalThis as any).document?.getElementById('track-record');
+                const trackEl = (globalThis as any).document?.getElementById('search-section');
                 if (trackEl) {
                   trackEl.scrollIntoView({ behavior: 'smooth' });
                 }
@@ -140,11 +157,6 @@ export default function HomePage() {
 
         {/* Bottom Accent Golden Horizon */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
-      </section>
-
-      {/* Elevated Stats Track Record Block */}
-      <section id="track-record" className="scroll-mt-12">
-        <StatsSection />
       </section>
 
       {/* Full Curated Real Estate Search Grid */}

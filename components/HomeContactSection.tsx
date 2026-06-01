@@ -4,7 +4,7 @@ export default function HomeContactSection() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8 border-t border-slate-200/50">
       {/* Concierge Booking Billboard */}
-      <div className="rounded-[3rem] border border-gold/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-10 shadow-2xl lg:p-16">
+      <div className="rounded-[3rem] border border-gold/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-10 shadow-2xl lg:p-16">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-8">
             {/* Elegant Luxury Badge */}
@@ -15,10 +15,10 @@ export default function HomeContactSection() {
 
             {/* Headline in Cormorant Display */}
             <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-white leading-tight font-serif">
+              <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-white text-force-white leading-tight font-serif">
                 Begin Your Property Journey
               </h2>
-              <p className="max-w-xl text-base text-slate-300 leading-relaxed font-medium">
+              <p className="max-w-xl text-base text-slate-300 text-force-slate-300 leading-relaxed font-medium">
                 Schedule a private, one-on-one consultation with our dedicated real estate advisors. Let us help you navigate Karnataka&apos;s prime markets with absolute ease and confidentiality.
               </p>
             </div>

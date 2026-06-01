@@ -22,54 +22,56 @@ export default function ComparePage() {
         </Link>
       </div>
 
-      <div className="overflow-hidden rounded-[2.5rem] border border-slate-200/80 bg-white shadow-soft">
-        <div className="grid gap-6 border-b border-slate-200 px-6 py-6 text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 sm:grid-cols-4">
-          <span className="col-span-1">Feature</span>
-          {compareProperties.map((property) => (
-            <span key={property.slug} className="text-center">{property.title}</span>
-          ))}
+      <div className="overflow-x-auto w-full rounded-[2.5rem] border border-slate-200/80 bg-white shadow-soft">
+        <div className="min-w-[800px]">
+          <div className="grid gap-6 border-b border-slate-200 px-6 py-6 text-sm font-semibold uppercase tracking-[0.22em] text-slate-500 grid-cols-4">
+            <span className="col-span-1">Feature</span>
+            {compareProperties.map((property) => (
+              <span key={property.slug} className="text-center">{property.title}</span>
+            ))}
+          </div>
+
+          <div className="divide-y divide-slate-200 px-6 py-6 text-sm text-slate-600">
+            <div className="grid gap-6 py-5 grid-cols-4">
+              <span className="font-semibold text-slate-800">Location</span>
+              {compareProperties.map((property) => (
+                <span key={`${property.slug}-location`} className="text-center">{property.locality}, {property.city}</span>
+              ))}
+            </div>
+            <div className="grid gap-6 py-5 grid-cols-4">
+              <span className="font-semibold text-slate-800">Price</span>
+              {compareProperties.map((property) => (
+                <span key={`${property.slug}-price`} className="text-center font-semibold text-brand">{property.price}</span>
+              ))}
+            </div>
+            <div className="grid gap-6 py-5 grid-cols-4">
+              <span className="font-semibold text-slate-800">Type</span>
+              {compareProperties.map((property) => (
+                <span key={`${property.slug}-type`} className="text-center">{property.type}</span>
+              ))}
+            </div>
+            <div className="grid gap-6 py-5 grid-cols-4">
+              <span className="font-semibold text-slate-800">Developer</span>
+              {compareProperties.map((property) => (
+                <span key={`${property.slug}-developer`} className="text-center">{property.developer}</span>
+              ))}
+            </div>
+            <div className="grid gap-6 py-5 grid-cols-4">
+              <span className="font-semibold text-slate-800">Amenities</span>
+              {compareProperties.map((property) => (
+                <span key={`${property.slug}-amenities`} className="text-center">{property.amenities.join(', ')}</span>
+              ))}
+            </div>
+            <div className="grid gap-6 py-5 grid-cols-4">
+              <span className="font-semibold text-slate-800">Category</span>
+              {compareProperties.map((property) => (
+                <span key={`${property.slug}-category`} className="text-center uppercase tracking-[0.08em] text-slate-500">{property.category}</span>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="divide-y divide-slate-200 px-6 py-6 text-sm text-slate-600">
-          <div className="grid gap-6 py-5 sm:grid-cols-4">
-            <span className="font-semibold text-slate-800">Location</span>
-            {compareProperties.map((property) => (
-              <span key={`${property.slug}-location`} className="text-center">{property.locality}, {property.city}</span>
-            ))}
-          </div>
-          <div className="grid gap-6 py-5 sm:grid-cols-4">
-            <span className="font-semibold text-slate-800">Price</span>
-            {compareProperties.map((property) => (
-              <span key={`${property.slug}-price`} className="text-center font-semibold text-brand">{property.price}</span>
-            ))}
-          </div>
-          <div className="grid gap-6 py-5 sm:grid-cols-4">
-            <span className="font-semibold text-slate-800">Type</span>
-            {compareProperties.map((property) => (
-              <span key={`${property.slug}-type`} className="text-center">{property.type}</span>
-            ))}
-          </div>
-          <div className="grid gap-6 py-5 sm:grid-cols-4">
-            <span className="font-semibold text-slate-800">Developer</span>
-            {compareProperties.map((property) => (
-              <span key={`${property.slug}-developer`} className="text-center">{property.developer}</span>
-            ))}
-          </div>
-          <div className="grid gap-6 py-5 sm:grid-cols-4">
-            <span className="font-semibold text-slate-800">Amenities</span>
-            {compareProperties.map((property) => (
-              <span key={`${property.slug}-amenities`} className="text-center">{property.amenities.join(', ')}</span>
-            ))}
-          </div>
-          <div className="grid gap-6 py-5 sm:grid-cols-4">
-            <span className="font-semibold text-slate-800">Category</span>
-            {compareProperties.map((property) => (
-              <span key={`${property.slug}-category`} className="text-center uppercase tracking-[0.08em] text-slate-500">{property.category}</span>
-            ))}
-          </div>
-        </div>
-
-        <div className="px-6 py-6">
+        <div className="px-6 py-6 border-t border-slate-100">
           <p className="text-sm text-slate-600">Need help choosing? <a href="/contact" className="font-semibold text-brand">Contact our advisors</a> for a personalised recommendation.</p>
         </div>
       </div>
